@@ -10,6 +10,6 @@ cd ddm
 python manage.py runserver
 ```
 
-*Resources*
+**Resources**
 
-[Django Polls/Voting App Tutorial](https://docs.djangoproject.com/en/1.4/intro/tutorial01/)
+[Django Polls App Tutorial](https://docs.djangoproject.com/en/1.4/intro/tutorial01/)
