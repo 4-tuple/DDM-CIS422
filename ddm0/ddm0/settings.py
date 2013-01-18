@@ -103,7 +103,7 @@ ROOT_URLCONF = 'ddm0.urls'
 WSGI_APPLICATION = 'ddm0.wsgi.application'
 
 TEMPLATE_DIRS = (
-    '/Users/broinjc/DDM-CIS422/ddm0/templates',
+    'templates',
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
