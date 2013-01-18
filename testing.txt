@@ -1,1 +1,8 @@
+<<<<<<< HEAD
 1
+=======
+I'm testing.
+--Louis
+fdjl
+newline
+>>>>>>> CR
