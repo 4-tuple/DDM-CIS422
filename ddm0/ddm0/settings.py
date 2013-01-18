@@ -1,10 +1,10 @@
-# Django settings for ddm project.
+# Django settings for ddm0 project.
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
-   # ('Your Name', 'your_email@example.com'),
+    # ('Your Name', 'your_email@example.com'),
 )
 
 MANAGERS = ADMINS
@@ -12,7 +12,7 @@ MANAGERS = ADMINS
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': '/Users/broinjc/ddm/ddm.db',                      # Or path to database file if using sqlite3.
+        'NAME': 'ddm0.db',                      # Or path to database file if using sqlite3.
         'USER': '',                      # Not used with sqlite3.
         'PASSWORD': '',                  # Not used with sqlite3.
         'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
@@ -78,7 +78,7 @@ STATICFILES_FINDERS = (
 )
 
 # Make this unique, and don't share it with anybody.
-SECRET_KEY = '4e=u(p*_tx(*xfz#pekkj8%3%7_=4!_spm%&amp;@m2j(ca^7zc3##'
+SECRET_KEY = 'p%(j_x=r+&amp;gm0knz@fcye++@r_tpb)z5ymb*5pf-juw02=x78*'
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
@@ -97,13 +97,13 @@ MIDDLEWARE_CLASSES = (
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'ddm.urls'
+ROOT_URLCONF = 'ddm0.urls'
 
 # Python dotted path to the WSGI application used by Django's runserver.
-WSGI_APPLICATION = 'ddm.wsgi.application'
+WSGI_APPLICATION = 'ddm0.wsgi.application'
 
 TEMPLATE_DIRS = (
-    '/Users/broinjc/DDM-CIS422/templates'
+    '/Users/broinjc/DDM-CIS422/ddm0/templates',
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
