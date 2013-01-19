@@ -4,8 +4,6 @@
         <li><a href="/polls/{{ poll.id }}/">{{ poll.question }}</a></li>
     {% endfor %}
     </ul>
-{% elif poll_detail %}
-    <h1>Poll choices: {{ poll.choices }}</h1>
 {% else %}
     <p>No polls are available.</p>
 {% endif %}

@@ -9,3 +9,11 @@ def index(request):
 def detail(request, poll_id):
     p = get_object_or_404(Poll, pk=poll_id)
     return render_to_response('polls/detail.html', {'poll': p})
+
+def results(request, poll_id):
+    p = get_object_or_404(Poll, pk=poll_id)
+    return render_to_response('polls/results.html', {'poll': p})
+
+def vote(request, poll_id):
+    p = get_object_or_404(Poll, pk=poll_id)
+    return render_to_response('polls/vote.html', {'poll': p})
