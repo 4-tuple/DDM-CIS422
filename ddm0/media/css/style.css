@@ -1,0 +1,13 @@
+/* If this works the whole page will turn red */
+
+html {
+	background:red;
+}
+
+body {
+	background:red;
+}
+
+h1 {
+	color:red;
+}

@@ -4,7 +4,8 @@ from django.utils import timezone
 
 class Poll(models.Model):
     question = models.CharField(max_length=200)
-    pub_date = models.DateTimeField('date published')
+    pub_date = models.DateTimeField('Pub Date')
+    fin_date = models.DateTimeField('when will this poll end?')
     def __unicode__(self):
         return self.question
     def was_published_recently(self):
@@ -19,3 +20,4 @@ class Choice(models.Model):
     votes = models.IntegerField()
     def __unicode__(self):
         return self.choice
+
