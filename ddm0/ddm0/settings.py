@@ -96,8 +96,9 @@ MIDDLEWARE_CLASSES = (
     # Uncomment the next line for simple clickjacking protection:
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
-
+#mapping url to python code
 ROOT_URLCONF = 'ddm0.urls'
+
 
 # Python dotted path to the WSGI application used by Django's runserver.
 WSGI_APPLICATION = 'ddm0.wsgi.application'

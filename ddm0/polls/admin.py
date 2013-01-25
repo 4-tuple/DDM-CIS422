@@ -1,20 +1,22 @@
 from polls.models import Poll
-from django.contrib import admin
+from django.contrib import admin #import http files to use for user interface
 from polls.models import Choice
 
 class ChoiceInline(admin.TabularInline):
     model = Choice
     extra = 3
+	
 
 class PollAdmin(admin.ModelAdmin):
     fieldsets = [
         (None,               {'fields': ['question']}),
         ('Date information', {'fields': ['fin_date']}),
     ]
+	#it will check the option prt by calling chice inline object .
     inlines = [ChoiceInline]
-    list_display = ('question', 'pub_date', 'was_published_recently')
-    list_filter = ['pub_date']
+    list_display = ('question','fin_date' , 'was_published_recently')
+    list_filter = ['fin_date']
     search_fields = ['question']
-    date_hierarchy = 'pub_date'
+    date_hierarchy = 'fin_date'
 
 admin.site.register(Poll, PollAdmin)
