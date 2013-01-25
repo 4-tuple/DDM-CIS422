@@ -2,11 +2,13 @@
 
 {% block title %}Recent Polls{% endblock %}
 
-
 {% block content %}
-<h1>Recent Polls</h1>
+
+TODO: Implement a login
+
+<h1>Your Polls</h1>
     {% if latest_poll_list %}
-        <ul>
+        <ul class="poll-list">
         {% for poll in latest_poll_list %}
             <li><a href="/polls/{{ poll.id }}/">{{ poll.question }}</a></li>
         {% endfor %}
@@ -14,4 +16,11 @@
     {% else %}
         <p>No polls are available.</p>
     {% endif %}
+    <br />
+<p>TODO: Only allow one vote on assigned polls.</p> 
+
+<p>Add visual cues: <ul><li>Poll in progess</li> <li>Poll finished</li></ul></p>
+
+<p>In progress polls that the voter has voted on should be "grayed out". Finished Polls should display "n% of n people chose: choice"</p>
+
 {% endblock %}
