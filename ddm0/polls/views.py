@@ -3,6 +3,16 @@ from django.http import HttpResponseRedirect, HttpResponse
 from django.core.urlresolvers import reverse
 from django.template import RequestContext
 from polls.models import Choice, Poll
+from django.core.context_processors import csrf
+from django.contrib.auth import authenticate, login, logout
+
+def main_page(request):
+    return render_to_response('index.html')
+
+def logout_page(request):
+    # Log users out and re-direct them to the main page.
+    logout(request)
+    return HttpResponseRedirect('/')
 
 def vote(request, poll_id):
     p = get_object_or_404(Poll, pk=poll_id)
@@ -17,7 +27,9 @@ def vote(request, poll_id):
     else:
         selected_choice.votes += 1
         selected_choice.save()
-        # Always return an HttpResponseRedirect after successfully dealing
-        # with POST data. This prevents data from being posted twice if a
-        # user hits the Back button.
         return HttpResponseRedirect(reverse('poll_results', args=(p.id,)))
+
+
+
+
+
