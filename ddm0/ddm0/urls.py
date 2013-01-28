@@ -9,7 +9,7 @@ urlpatterns = patterns('',
     (r"^$", direct_to_template, {"template": "index.html"}),
 	
 	# Login / Logout - http://neverfear.org/blog/view/97/User_Authentication_With_Django
-	# url(r'^login/$', 'django.contrib.auth.views.login'),
+	url(r'^login/$', 'django.contrib.auth.views.login'),
 	# url(r'^logout/$', logout_page),
 
 
