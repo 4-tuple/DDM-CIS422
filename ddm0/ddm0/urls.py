@@ -8,10 +8,10 @@ urlpatterns = patterns('',
 	# Home page
     (r"^$", direct_to_template, {"template": "index.html"}),
 	
-	# Login / Logout - http://neverfear.org/blog/view/97/User_Authentication_With_Django
-	url(r'^login/$', 'django.contrib.auth.views.login'),
-	# url(r'^logout/$', logout_page),
-
+	(r'^login/$', 'django.contrib.auth.views.login'),
+    (r'^logout/$', 'django.contrib.auth.views.logout'),
+    
+    (r'^accounts/profile/$', direct_to_template, {"template": "index.html"}),
 
 
     url(r'^polls/', include('polls.urls')),

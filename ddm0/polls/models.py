@@ -1,6 +1,7 @@
 from django.db import models
 import datetime
 from django.utils import timezone
+from django.contrib.auth.models import User
 
 class Poll(models.Model):
     question = models.CharField(max_length=200) #checking the length of the questionfield takes character
@@ -20,4 +21,3 @@ class Choice(models.Model):
     votes = models.IntegerField()
     def __unicode__(self):
         return self.choice
-
