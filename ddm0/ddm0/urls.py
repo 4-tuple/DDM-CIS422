@@ -8,11 +8,8 @@ urlpatterns = patterns('',
 	# Home page
     (r"^$", direct_to_template, {"template": "index.html"}),
 	
-	(r'^login/$', 'django.contrib.auth.views.login'),
+	(r'^login/$', include('polls.views.login_voter')),
     (r'^logout/$', 'django.contrib.auth.views.logout'),
-    
-    (r'^accounts/profile/$', direct_to_template, {"template": "index.html"}),
-
 
     url(r'^polls/', include('polls.urls')),
     url(r'^admin/', include(admin.site.urls)),

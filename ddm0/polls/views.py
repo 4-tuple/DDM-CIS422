@@ -14,6 +14,28 @@ def logout_page(request):
     logout(request)
     return HttpResponseRedirect('/')
 
+def login_voter(request):
+    if request.method == 'POST': # If the form has been submitted...
+        form = LoginForm(request.POST) # A form bound to the POST data
+        if form.is_valid(): # All validation rules pass
+            username = form.cleaned_data['username']
+            password = form.cleaned_data['password']
+            voter = authenticate(username=username, password=password)
+            if voter is not None:
+                    login(request, voter)
+                    poll_list = Polls.objects.all().filter(avoter=voter)
+                    return render_to_response('polls/detail.html',
+                          {'Voter': voter, 'Polls': poll_list})
+        return render(request, 'polls/login.html', {'form': form})
+
+#
+#- Only allow one vote on assigned polls.
+#- Add visual cues: 
+#    Poll in progess 
+#    Poll finished (show results)
+#    You've already voted, no more votes allowed
+
+
 def vote(request, poll_id):
     p = get_object_or_404(Poll, pk=poll_id)
     try:

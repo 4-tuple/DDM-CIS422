@@ -5,6 +5,7 @@
 {% block content %}
 
 {% if User.is_authenticated %}
+
 <h1>Hi, { User.username }, here are your Polls</h1>
     {% if latest_poll_list %}
         <ul class="poll-list">
@@ -16,20 +17,9 @@
         <p>No polls are available.</p>
     {% endif %}
     <br />
-<p>TODO: Only allow one vote on assigned polls.</p> 
-
-<p>Add visual cues: <ul><li>Poll in progess</li> <li>Poll finished</li></ul></p>
-
-<p>In progress polls that the voter has voted on should be "grayed out". Finished Polls should display "n% of n people chose: choice"</p>
 
 {% else %}
-<h3>Login</h3>
-<form action="/login/" method="post" accept-charset="utf-8">
-    {% csrf_token %}
-<label for="username">Username</label><input type="text" name="username" value="" id="username" />
-<label for="password">Password</label><input type="password" name="password" value="" id="password" />
-<p><input type="submit" value="Login →"></p>
-</form>
+<h1>no polls for you!</h1>
 {% endif %}
 
 

@@ -5,7 +5,7 @@ from polls.models import Poll
 urlpatterns = patterns('',
     url(r'^$',
         ListView.as_view(
-            queryset=Poll.objects.order_by('-fin_date')[:5],
+            queryset=Poll.objects.order_by('-fin_date'),
             context_object_name='latest_poll_list',
             template_name='polls/index.html')),
     url(r'^(?P<pk>\d+)/$',

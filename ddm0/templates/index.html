@@ -5,14 +5,16 @@
 
 {% block content %}
 
-<h1>Welcome</h1>
-<p>
 
-<ul>
-	<li><a href="polls/">Vote on polls</a></li>
-	<li><a href="admin/">Moderator login</a></li>
-</ul>
+<h1>Login</h1>
 
-</p>
+<div id="vote">
+<form action="/login/" method="post" accept-charset="utf-8">
+    {% csrf_token %}
+<label for="username">Username</label><input type="text" name="username" value="" id="username" /><br />
+<label for="password">Password</label><input type="password" name="password" value="" id="password" />
+<p style="float:right;"><input type="submit" value="Login →"></p>
+</form>
+</div>
 
 {% endblock %}

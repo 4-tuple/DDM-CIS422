@@ -10,11 +10,12 @@ class ChoiceInline(admin.TabularInline):
 class PollAdmin(admin.ModelAdmin):
     fieldsets = [
         (None,               {'fields': ['question']}),
-        ('Date information', {'fields': ['fin_date']}),
+        ('Group ID', {'fields': ['pin']}),
+        ('Last day to vote:', {'fields': ['fin_date']}),
     ]
 	#it will check the option prt by calling chice inline object .
     inlines = [ChoiceInline]
-    list_display = ('question','fin_date' , 'was_published_recently')
+    list_display = ('question','fin_date' , 'pin')
     list_filter = ['fin_date']
     search_fields = ['question']
     date_hierarchy = 'fin_date'
