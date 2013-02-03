@@ -1,6 +1,7 @@
 from django.conf.urls import patterns, include, url
 from django.views.generic.simple import direct_to_template
 from django.contrib import admin
+from django.contrib.auth.views import login
 admin.autodiscover()
 
 urlpatterns = patterns('',
@@ -8,9 +9,8 @@ urlpatterns = patterns('',
 	# Home page
     (r"^$", direct_to_template, {"template": "index.html"}),
 	
-	(r'^login/$', 'polls.views.login_voter'),
-    (r'^register/$', 'polls.views.register_voter'),
+	(r'^login/$', login),
 
-    url(r'^polls/', include('polls.urls')),
-    url(r'^admin/', include(admin.site.urls)),
+    (r'^polls/', include('polls.urls')),
+    (r'^admin/', include(admin.site.urls)),
 )

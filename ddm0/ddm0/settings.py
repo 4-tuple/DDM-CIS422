@@ -96,6 +96,7 @@ MIDDLEWARE_CLASSES = (
     # Uncomment the next line for simple clickjacking protection:
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
+
 #mapping url to python code
 ROOT_URLCONF = 'ddm0.urls'
 

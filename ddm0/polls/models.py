@@ -19,15 +19,3 @@ class Choice(models.Model):
     votes = models.IntegerField()
     def __unicode__(self):
         return self.choice
-
-class Voter(models.Model):
-    user = models.OneToOneField(User)
-    def __unicode__(self):
-        return self.username
-
-#used for creating players
-class VoterForm(forms.Form):
-    username = forms.CharField(max_length=100)
-    password = forms.CharField(widget=forms.PasswordInput())
-    confirm_password = forms.CharField(widget=forms.PasswordInput())
-    email = forms.EmailField(max_length=100)
