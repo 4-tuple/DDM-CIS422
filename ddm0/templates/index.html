@@ -1,0 +1,22 @@
+{% extends "polls/base.html" %}
+
+{% block title %}Vote{% endblock %}
+
+
+{% block content %}
+
+<h1>Welcome</h1>
+
+<form action="/polls/" method="post">
+	{% csrf_token %}
+    <form action="/contact/" method="post">
+<p><label for="pin">Enter group pin:</label>
+    <input id="pin" type="text" name="pin" maxlength="4" />
+  <input type="submit" value="View Polls" /></p>
+</form>
+
+	<a href="admin/">Moderator login</a>
+
+</p>
+
+{% endblock %}

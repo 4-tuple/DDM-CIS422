@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>{% block title %}{% endblock %}</title>
+    <style type="text/css">
+    #content {
+		background:#a4f8db;
+		max-width: 700px;
+		margin:0 auto;
+		padding:10px;
+		border-radius: 20px;
+	}
+	body {
+   		font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+   		font-weight: 300;
+   		background: #f3fefa;
+	}
+	h1 {
+		color:#39c8a8;
+		text-align: center;
+	}
+	.poll-list{
+		list-style-type:none;
+	}
+	#vote{
+		background: #64f4c2;
+		max-width: 300px;
+		margin: 0 auto;
+		padding: 6px;
+		border-radius: 10px;
+	}
+    </style>
+</head>
+<body>
+	
+	<div id="content">
+    	{% block content %}{% endblock %}
+	</div>
+</body>
+</html>
