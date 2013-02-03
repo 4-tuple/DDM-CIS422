@@ -5,16 +5,10 @@
 
 {% block content %}
 
-
-<h1>Login</h1>
+<h1>Distributed Desicion Making</h1>
 
 <div id="vote">
-<form action="/login/" method="post" accept-charset="utf-8">
-    {% csrf_token %}
-<label for="username">Username</label><input type="text" name="username" value="" id="username" /><br />
-<label for="password">Password</label><input type="password" name="password" value="" id="password" />
-<p style="float:right;"><input type="submit" value="Login →"></p>
-</form>
+<a href="/login">Login</a>
 </div>
 
 {% endblock %}
