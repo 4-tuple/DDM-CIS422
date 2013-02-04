@@ -4,7 +4,13 @@
     <title>{% block title %}{% endblock %}</title>
     <style type="text/css">
     #content {
+    	background: url({{ STATIC_URL }}img/guy.jpeg) no-repeat bottom left #fffcf3;
+		
+		{% comment %}
+
 		background: url(http://users.bible.org/sites/users.bible.org/files/u21652/decisionmaking.jpg) no-repeat bottom left #fffcf3;
+		{% endcomment %}
+
 		height: 500px;
 		max-width: 700px;
 		margin: 0 auto;
