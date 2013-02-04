@@ -5,12 +5,11 @@
 {% block content %}
 <h1>{{ poll.question }}</h1>
 
+<div id="vote">
 <ul>
 {% for choice in poll.choice_set.all %}
     <li>{{ choice.choice }} -- {{ choice.votes }} vote{{ choice.votes|pluralize }}</li>
 {% endfor %}
 </ul>
-
-<a href="/polls/">Back to polls</a>
-
+</div>
 {% endblock %}

@@ -1,17 +1,16 @@
 {% extends "polls/base.html" %}
 
-{% block title %}Recent Polls{% endblock %}
+{% block title %}Your Polls!{% endblock %}
 
 {% block content %}
 
-<h1>Polls: ONLY VOTE ONCE. BE HONEST.</h1>
-    
-{% for poll in latest_poll_list %}
-    {% if poll.pin == "1234" %}
+<h1>Your Polls!</h1>
+
+{% for p in polls %}
         <ul class="poll-list">
-            <li><a href="/polls/{{ poll.id }}/">{{ poll.question }}</a> - {{poll.pin}}</li>
+            <li><a href="/polls/{{ p.id }}/">{{ p.question }}</a> - {{p.pin}}</li>
         </ul>
-    {% endif %}
 {% endfor %}
+
 
 {% endblock %}

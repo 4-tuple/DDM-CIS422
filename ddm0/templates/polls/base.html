@@ -4,26 +4,34 @@
     <title>{% block title %}{% endblock %}</title>
     <style type="text/css">
     #content {
-		background:#a4f8db;
+		background: url(http://users.bible.org/sites/users.bible.org/files/u21652/decisionmaking.jpg) no-repeat bottom left #fffcf3;
+		height: 500px;
 		max-width: 700px;
-		margin:0 auto;
+		margin: 0 auto;
+		margin-top:60px;
+		margin-bottom:0px;
 		padding:10px;
 		border-radius: 20px;
+	}
+	#footer{
+		max-width: 700px;
+		margin: 0 auto;
+		text-align: right;
 	}
 	body {
    		font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
    		font-weight: 300;
-   		background: #f3fefa;
+   		background: #92dc79;
 	}
 	h1 {
-		color:#39c8a8;
+		color:#49a22b;
 		text-align: center;
 	}
 	.poll-list{
 		list-style-type:none;
 	}
 	#vote{
-		background: #64f4c2;
+		background: #a0f184;
 		max-width: 300px;
 		margin: 0 auto;
 		padding: 6px;
@@ -36,5 +44,6 @@
 	<div id="content">
     	{% block content %}{% endblock %}
 	</div>
+	<div id="footer"><a href="/">home</a></div>
 </body>
 </html>

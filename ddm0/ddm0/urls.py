@@ -7,7 +7,7 @@ urlpatterns = patterns('',
 	
 	# Home page
     (r"^$", direct_to_template, {"template": "index.html"}),
-    
+    url(r'^list/', 'polls.views.list'),
     url(r'^polls/', include('polls.urls')),
     url(r'^admin/', include(admin.site.urls)),
 )

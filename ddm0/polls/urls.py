@@ -1,12 +1,12 @@
 from django.conf.urls import patterns, include, url
 from django.views.generic import DetailView, ListView
+from django.views.generic.simple import direct_to_template
 from polls.models import Poll
 
 urlpatterns = patterns('',
     url(r'^$',
         ListView.as_view(
-            queryset=Poll.objects.order_by('-fin_date')[:5],
-            context_object_name='latest_poll_list',
+            model=Poll,
             template_name='polls/index.html')),
     url(r'^(?P<pk>\d+)/$',
         DetailView.as_view(
